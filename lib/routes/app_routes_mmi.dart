@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:examen_mmi/models/menu_option_mmi.dart';
 import 'package:examen_mmi/screens/home_screen_mmi.dart';
 import 'package:examen_mmi/screens/Sign_in_screen_mmi.dart';
+import 'package:examen_mmi/screens/list_view_screen.dart';
 
 class AppRoutesMmi {
   static final MenuOptions = <MenuOption>[
@@ -16,6 +17,11 @@ class AppRoutesMmi {
         icon: Icons.person,
         name: 'signin Screen',
         screen: const SignInScreenMmi()),
+            MenuOption(
+        route: 'listview',
+        icon: Icons.person,
+        name: 'listview',
+        screen: const ListviewMmi()),
   ];
   static const initialRoute = 'home';
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

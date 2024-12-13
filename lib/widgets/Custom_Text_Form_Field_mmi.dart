@@ -9,9 +9,10 @@ class CustomTextFormFieldMmi extends StatelessWidget {
     final TextInputType? keyboardAction;
     final String formProperty;
     final Map<String, String> formValues;
+    final bool obscureText;
 
   const CustomTextFormFieldMmi({
-    super.key, this.hintText, this.labelText, this.helperText, this.icono, this.keyboardAction, required this.formProperty, required this.formValues,
+    super.key, this.hintText, this.labelText, this.helperText, this.icono, this.keyboardAction, required this.formProperty, required this.formValues, required this.obscureText,
   });
 
   @override
@@ -25,6 +26,7 @@ class CustomTextFormFieldMmi extends StatelessWidget {
         formValues[formProperty] = value;
       
       },
+      obscureText: obscureText,
       validator: (value) {
         if (value!.length < 8) {
           return 'Minimo 8 caracteres';
