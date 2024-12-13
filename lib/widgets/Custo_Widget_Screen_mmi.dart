@@ -6,6 +6,7 @@ class CustomWidgetScreenMmi extends StatelessWidget {
   final String description;
   final Color appBarColor;
   final Color textColor;
+  final String boton;
 
   const CustomWidgetScreenMmi({
     super.key,
@@ -14,6 +15,7 @@ class CustomWidgetScreenMmi extends StatelessWidget {
     required this.description,
     this.appBarColor = Colors.blue,
     this.textColor = Colors.white,
+    required this.boton
   });
 
   @override
@@ -37,11 +39,6 @@ class CustomWidgetScreenMmi extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 250,
-              child: FadeInImage(
-                placeholder: const AssetImage('assets/jar-loading.gif'),
-                image: NetworkImage(imageUrl),
-                fit: BoxFit.cover,
-              ),
             ),
 
             

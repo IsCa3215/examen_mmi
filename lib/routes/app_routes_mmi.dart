@@ -4,6 +4,7 @@ import 'package:examen_mmi/models/menu_option_mmi.dart';
 import 'package:examen_mmi/screens/home_screen_mmi.dart';
 import 'package:examen_mmi/screens/Sign_in_screen_mmi.dart';
 import 'package:examen_mmi/screens/list_view_screen.dart';
+import 'package:examen_mmi/screens/pistas_screen_mmi.dart';
 
 class AppRoutesMmi {
   static final MenuOptions = <MenuOption>[
@@ -22,6 +23,11 @@ class AppRoutesMmi {
         icon: Icons.person,
         name: 'listview',
         screen: const ListviewMmi()),
+                    MenuOption(
+        route: 'Pistas',
+        icon: Icons.person,
+        name: 'Pistas',
+        screen: const PistasScreenMmi()),
   ];
   static const initialRoute = 'home';
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
